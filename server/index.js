@@ -10,6 +10,8 @@ import userRoutes from './routes/users.js'
 const app = express();
 dotenv.config();
 
+mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser: true});
+
 
 app.use(bodyParser.json({limit: "30mb", extended: true})); //limit means sending images 
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
@@ -18,12 +20,8 @@ app.use('/posts', postRoutes); //identify routes after cors
 
 app.use('/user', userRoutes)
 
+app.use(cors({origin: process.env.CORS_ORIGIN}))
 
-const CONNECTION_URL = 'mongodb+srv://<username>:<password>@cluster0.itsc5.mongodb.net/travelApp?retryWrites=true&w=majority';
-const PORT = process.env.PORT || 5000;
 
-mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true}) 
-    .then(() => app.listen(PORT, () => console.log(`listening on port ${PORT}`)))
-    .catch((error) => console.log(error.message));
 
 // mongoose.set('useFindAndModify', false);

@@ -147,3 +147,7 @@ create middleware folder with auth file
 make sure you are using axios instance within API index.js (baseURL) 
 // to use more complicated features of axios ^^. 
 //the api is getting different calls not just to one type of route (the beginning route is stated on top.)
+
+
+---maps---
+npm install @material-ui/lab @react-google-maps/api google-map-react

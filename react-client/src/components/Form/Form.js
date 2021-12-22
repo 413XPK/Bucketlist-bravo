@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import useStyles from './styles'
-import {TextField, Button, Typography, Paper } from '@material-ui/core';
+import {InputBase, Box, TextField, Button, Typography, Paper } from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import {useDispatch, useSelector} from 'react-redux';
 import {createPost, updatePost} from '../../actions/posts'
+import {Autocomplete} from '@react-google-maps/api';
+import SearchIcon from '@material-ui/icons/Search'
 
 const Form = ({currentId, setCurrentId}) => {
     const [postData, setPostData] = useState({
@@ -63,6 +65,16 @@ const Form = ({currentId, setCurrentId}) => {
             <form autoComplete='off' noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
                 <Typography variant='h6'>{currentId ? 'Editing' : 'Creating'} a Pin</Typography>
                 
+                <Box display='flex'>
+                {/* <Autocomplete> */}
+                    <div className={classes.search}>
+                        <div className={classes.searchIcon}>
+                            <SearchIcon />
+                        </div>
+                        <InputBase placeholder='Search...' classes={{root: classes.inputRoot, input: classes.inputInput}} />
+                    </div>
+                {/* </Autocomplete> */}
+                </Box>
                 <TextField 
                     name='title' 
                     variant='outlined' 
