@@ -24,18 +24,22 @@ const Home = () => {
               
             <Grid  className={classes.Container} container  justify='space-between' spacing={3}>
 
-              <Grid  className={classes.map} xs={8}  md={8}>
+              
+
+              <div className={classes.leftColumn}>
+                <Grid className={classes.form} item xs={6} md={8}>
+                  <Form currentId={currentId} setCurrentId={setCurrentId}/>
+                </Grid>
+
+                <Grid item xs={12} sm={6} md={8}>
+                  <Posts setCurrentId={setCurrentId}/>
+                </Grid>
+              </div>
+
+              <Grid  className={classes.map} xs={4}  md={8}>
                 <Map />
               </Grid>
 
-              <Grid className={classes.form} item xs={4} md={8}>
-                <Form currentId={currentId} setCurrentId={setCurrentId}/>
-              </Grid>
-
-              <Grid item xs={12} sm={5} md={8}>
-                <Posts setCurrentId={setCurrentId}/>
-              </Grid>
-              
             </Grid>
               
             {/* alignItems='stretch' */}

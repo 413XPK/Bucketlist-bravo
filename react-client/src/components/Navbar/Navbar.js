@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { InputBase, Box, AppBar, Typography, Avatar, Toolbar, Button} from '@material-ui/core';
+import {  AppBar, Typography, Avatar, Toolbar, Button} from '@material-ui/core';
 import useStyles from './styles'
 import travel from '../../images/travel.png';
 import {Link, useNavigate, useLocation} from 'react-router-dom';

@@ -5,13 +5,15 @@ export default makeStyles((theme) => ({
   
   appBar: {
     
-    margin: '-10px',
+    margin: '-10px 0 0 -330px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
-    position: 'relative'
+    position: 'relative',
+    width: '100%',
+    position: 'absolute'
   },
   
   heading: {

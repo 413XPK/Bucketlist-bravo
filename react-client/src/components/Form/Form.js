@@ -63,9 +63,10 @@ const Form = ({currentId, setCurrentId}) => {
     return (
         <Paper className={classes.paper}> 
             <form autoComplete='off' noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-                <Typography variant='h6'>{currentId ? 'Editing' : 'Creating'} a Pin</Typography>
+                <div className={classes.top}>
+                <Typography className={classes.Typography} variant='h6'>{currentId ? 'Editing' : 'Creating'} a Pin</Typography>
                 
-                <Box display='flex'>
+                <Box className={classes.Box} display='flex'>
                 {/* <Autocomplete> */}
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
@@ -75,6 +76,8 @@ const Form = ({currentId, setCurrentId}) => {
                     </div>
                 {/* </Autocomplete> */}
                 </Box>
+                </div>
+                
                 <TextField 
                     name='title' 
                     variant='outlined' 

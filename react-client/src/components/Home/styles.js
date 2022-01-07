@@ -11,12 +11,18 @@ export default makeStyles(() => ({
     form:{
         // gridColumn: 'a-start'
     },
+    leftColumn: {
+        width: '600px',
+    },
 
     map: {
-        gridColumn: '2/4',
+        // gridColumn: '2/4',
         display: 'flex',
         backgroundColor: 'blue',
-        // position: 'absolute',
+        marginTop: '120px',
+        width: '1200px'
+        
+        // position: 'relative',
         // marginLeft: '450px',
         // wrap: 'wrap',
     }
