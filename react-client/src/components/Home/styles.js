@@ -18,7 +18,7 @@ export default makeStyles(() => ({
     map: {
         // gridColumn: '2/4',
         display: 'flex',
-        backgroundColor: 'blue',
+        // backgroundColor: 'blue',
         marginTop: '120px',
         width: '1200px'
         

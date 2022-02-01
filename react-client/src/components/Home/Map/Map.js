@@ -9,12 +9,12 @@ import Rating from '@material-ui/lab';
 const Map = () => {
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)')
-    const coordinates = {lat: 0, lng: 0}
+    const coordinates = {lat: 43.6532, lng: -79.3832}
     return (
         <div className={classes.mapContainer}>
             <GoogleMapReact 
-                bootsrapURLKeys={{key: 'AIzaSyC6lXeO5929Da3Gbw2b7Yb7NsRct-dCEJc'}} 
-                defaultCenter={} 
+                bootstrapURLKeys={{key: 'AIzaSyC6lXeO5929Da3Gbw2b7Yb7NsRct-dCEJc'}} 
+                defaultCenter={coordinates} 
                 center={coordinates} 
                 defaultZoom={14} 
                 margin={[50,50,50,50]} 
